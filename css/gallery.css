@@ -1,0 +1,148 @@
+/* Gallery list page */
+
+ul li,
+ol li {
+  margin-top: 0;
+}
+
+.modal.modal-lg .modal-container {
+	max-width: 100%;
+    width: auto;
+}
+
+.gal-img {
+	position: relative;
+}
+
+.gallery-list-wrap {
+	position: relative;
+	padding-bottom: 10px;
+}
+
+.subtitle {
+	margin-bottom: 20px;
+}
+
+.gallery-list {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+}
+.gallery-list {
+	margin: .8rem;
+}
+
+.gallery-list li.gall-list-item {
+	width: 25%;
+	padding: 5px 10px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.gallery-list li.gall-list-item figcaption {
+	font-family: 'Erotique-Trial', sans-serif;
+	font-size: 18px;
+	color: #fff;
+}
+
+.gallery-list li.gall-list-item label.choose {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	z-index: 9;
+}
+
+.gallery-list li.gall-list-item label.choose .chk-mark::before {
+	width: 30px;
+	height: 30px;
+}
+
+.gallery-list li.gall-list-item label.choose input[type="checkbox"]:checked+.chk-mark:before {
+	font-size: 20px;
+	line-height: 26px;
+}
+
+.gallery-list li.gall-list-item img {
+	-webkit-border-radius: 0px;
+	-ms-border-radius:0px;
+	border-radius: 0px;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+.gallery-list li.gall-list-item:hover .img-overlay {
+	opacity: 1;
+}
+
+.gallery-list li.gall-list-item p {
+	margin-bottom: 10px;
+}
+
+.gallery-list li.gall-list-item .form-row {
+	border-top: 1px solid #b5b5b5;
+	padding-top: 15px;
+	margin-top: 5px;
+	font-size: 18px;
+}
+
+.gallery-list li.gall-list-item .form-row+.form-row {
+	border-top: none;
+	padding-top: 0;
+	margin-top: 0;
+}
+
+.gallery-list.wookmark-initialised.animated li {
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.img-overlay {
+	background: rgba(0, 0, 0, 0.7);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	border-radius: 10px;
+	transition: all 0.5s ease-in-out 0s;
+	-webkit-transition: all 0.5s ease-in-out 0s;
+}
+
+.img-overlay i {
+	color: #fff;
+	font-size: 36px;
+}
+
+@media (max-width: 1024px) {
+	.gallery-list li.gall-list-item {
+		width: 33.33%;
+	}
+}
+
+@media (max-width: 767px) {
+	.gallery-list li.gall-list-item {
+		width: 50%;
+		padding: 3px 6px;
+	}
+	.art-escape .section-title {
+		margin-bottom: 0;
+	}
+	.sound button {
+		width: 70px;
+		height: 55px;
+	}
+	.sound button img {
+		max-width: 100%;
+	}
+	.header .know {
+		font-size: .7rem;
+	}
+}
+

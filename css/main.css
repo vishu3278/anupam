@@ -1,0 +1,807 @@
+/*main styles*/
+@font-face {
+    font-family: 'alternate-gothic';
+    src: url('../fonts/alternate-gothic-no1-d.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Signifier-Thin';
+    src: url('../fonts/Signifier-Thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'sugelasugela-gowdq';
+    src: url('../fonts/sugelasugela-gowdq.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --alternate-gothic: 'alternate-gothic', sans-serif;
+    --signifier-thin: 'Signifier-Thin', serif;
+    --sugelasugela-gowdq: 'sugelasugela-gowdq', serif;
+}
+
+body {
+    background-color: white;
+    font-family: var(--alternate-gothic);
+    font-size: 14px;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.header-wrapper {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    background-color: black;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*justify-items: space-between;*/
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    padding: 0.25rem 1rem;
+    color: white;
+}
+
+.header a,
+.header a:hover {
+    text-decoration: none;
+}
+
+.header a {
+    margin-right: 2rem;
+    color: #fff;
+    font-size: 18px;
+}
+
+.sound {
+    color: white;
+}
+
+.sound button {
+    appearance: none;
+    background-color: transparent;
+    border: 0 none;
+    color: white;
+    font-size: 18px;
+}
+
+.sound img {
+    vertical-align: middle;
+}
+
+.homepage-bg {
+    /*height: 100vh;*/
+    /*min-height: 620px;*/
+    min-height: 100vh;
+    background-color: #c4c4c4;
+    background-image: url('../images/anupama-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center 60px;
+    background-size: 1400px auto;
+}
+
+.gallery-links {
+    position: absolute;
+    top: 375px;
+    left: calc(50vw + 30px);
+    /*right: 150px;*/
+    height: 200px;
+    width: 30px;
+}
+
+.gallery-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: black;
+    border-radius: 50%;
+    color: white;
+    font-family: var(--alternate-gothic);
+    font-size: 2rem;
+    font-weight: 300;
+    text-decoration: none;
+    position: absolute;
+    transition: all 200ms ease-out;
+    transform: rotate(0deg);
+    box-shadow: 0 1px 10px rgba(40, 55, 60, 0.75);
+}
+
+.gallery-links a:hover {
+    text-decoration: none;
+    transform: rotate(90deg);
+    background-color: darkgray;
+    color: black;
+}
+
+.gallery-links a:nth-child(odd) {
+    top: 50px;
+    /*left: -270px;*/
+}
+
+.gallery-links a:nth-child(even) {
+    top: 0;
+    /*left: -90px;*/
+}
+.gallery-links a:nth-child(1) {
+    left: -275px;
+}
+
+.gallery-links a:nth-child(2) {
+    left: -85px;
+}
+.gallery-links a:nth-child(3) {
+    left: 115px;
+}
+
+.gallery-links a:nth-child(4) {
+    top: 5px;
+    left: 310px;
+}
+
+
+.fold-one {
+    left: 12%;
+    top: 690px;
+    right: 4%;
+    position: absolute;
+    font-size: 94px;
+}
+
+.fold-one .intro-title {
+    color: #292929;
+    font-size: 1em;
+    font-family: var(--sugelasugela-gowdq);
+    line-height: 1;
+    margin-bottom: 0;
+}
+
+.fold-one .subtitle {
+    font-size: 0.3em;
+    font-family: var(--signifier-thin);
+    /*color: black;*/
+    line-height: 1;
+}
+
+.gallery-bg {
+    background-image: url('../images/gallery-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center 3rem;
+    background-size: 1400px auto;
+    padding: 4rem 6rem;
+    height: 100vh;
+}
+
+.inside-heading {
+    text-align: center;
+    color: black;
+    font-family: var(--sugelasugela-gowdq);
+    font-size: 64px;
+    letter-spacing: 2px;
+}
+
+.gallery-wrapper {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-family: var(--signifier-thin);
+}
+
+.gallery-wrapper figure {
+    padding: 0.25rem;
+}
+
+.commonmodal .modal-container {
+    background: white url('../images/modal-img.png') no-repeat center top;
+    background-size: cover;
+    position: relative;
+    font-family: var(--signifier-thin);
+}
+
+.commonmodal .modal-header,
+.commonmodal .modal-body {
+    /*color: #fff;*/
+}
+
+.commonmodal .modal-header {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.commonmodal .modal-body {
+    margin: 2rem;
+}
+
+.commonmodal .modal-content {
+    margin-left: 40%;
+}
+
+.commonmodal .modal-body h2 {
+    font-family: var(--sugelasugela-gowdq);
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.commonmodal350 .modal-body p {
+    font-size: 14px;
+}
+
+
+.product-gallery {
+    margin-top: 75px;
+    padding: 0 135px;
+}
+
+.prod-wrap {
+    margin-bottom: 80px;
+    cursor: pointer;
+}
+
+.prod-info h3 {
+    font-size: 16px;
+    line-height: 27px;
+    color: var(--white);
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.prod-info .prod-size {
+    font-size: 16px;
+    line-height: 27px;
+    color: var(--white);
+}
+
+.product-gallery .prod-wrap img {
+    max-width: 100%;
+}
+
+.landscape {
+    opacity: 0;
+    position: fixed;
+    inset: 10px;
+    background: rgba(20, 20, 20, 0.25);
+    color: whitesmoke;
+    text-align: center;
+    font-size: 3rem;
+    transition: all 360ms ease-out;
+    z-index: -1;
+}
+
+.landscape img {
+    max-width: 15rem;
+}
+@media screen and (max-width: 4600px) {
+    .homepage-bg {
+        background-size: 4620px auto;
+    }
+    .gallery-links {
+        top: 815px;
+    }
+    .gallery-links a {
+        width: 96px; height: 96px; font-size: 6.5rem;
+    }
+    .gallery-links a:nth-child(odd) {
+        top: 110px;
+    }
+    .gallery-links a:nth-child(1) {
+        left: -620px;
+    }
+
+    .gallery-links a:nth-child(2) {
+        left: -165px;
+    }
+
+    .gallery-links a:nth-child(3) {
+        left: 310px;
+    }
+
+    .gallery-links a:nth-child(4) {
+        left: 770px;
+    }
+
+    .fold-one {
+        top: 1610px;
+        font-size: 5.75vw;
+    }
+
+}
+
+@media screen and (max-width: 4000px) {
+    .homepage-bg {
+        background-size: 4200px auto;
+    }
+    .gallery-links {
+        top: 745px;
+    }
+    .gallery-links a {
+        width: 72px; height: 72px; font-size: 5rem;
+    }
+    .gallery-links a:nth-child(odd) {
+        top: 110px;
+    }
+    .gallery-links a:nth-child(1) {
+        left: -555px;
+    }
+
+    .gallery-links a:nth-child(2) {
+        left: -145px;
+    }
+
+    .gallery-links a:nth-child(3) {
+        left: 285px;
+    }
+
+    .gallery-links a:nth-child(4) {
+        left: 710px;
+    }
+
+    .fold-one {
+        top: 1450px;
+        font-size: 5.5vw;
+    }
+
+}
+
+@media screen and (max-width: 3000px) {
+    .homepage-bg {
+        background-size: 3200px auto;
+    }
+    .gallery-links {
+        top: 580px;
+    }
+    .gallery-links a {
+        width: 64px; height: 64px; font-size: 4rem;
+    }
+    .gallery-links a:nth-child(odd) {
+        top: 80px;
+    }
+    .gallery-links a:nth-child(1) {
+        left: -435px;
+    }
+
+    .gallery-links a:nth-child(2) {
+        left: -125px;
+    }
+
+    .gallery-links a:nth-child(3) {
+        left: 205px;
+    }
+
+    .gallery-links a:nth-child(4) {
+        left: 530px;
+    }
+
+    .fold-one {
+        top: 1140px;
+        font-size: 5vw;
+    }
+
+}
+
+@media screen and (max-width: 2600px) {
+    .homepage-bg {
+        background-size: 2750px auto;
+    }
+    .gallery-links {
+        top: 500px;
+    }
+    /*.gallery-links a {
+        width: 64px; height: 64px; font-size: 4rem;
+    }*/
+    .gallery-links a:nth-child(odd) {
+        top: 65px;
+    }
+    .gallery-links a:nth-child(1) {
+        left: -380px;
+    }
+
+    .gallery-links a:nth-child(2) {
+        left: -115px;
+    }
+
+    .gallery-links a:nth-child(3) {
+        left: 160px;
+    }
+
+    .gallery-links a:nth-child(4) {
+        left: 450px;
+    }
+
+    .fold-one {
+        top: 980px;
+        font-size: 5vw;
+    }
+
+}
+
+@media screen and (max-width: 1920px) {
+    .homepage-bg {
+        background-size: 1920px auto;
+    }
+    .gallery-links {
+        top: 370px;
+    }
+
+    .gallery-links a {
+        width: 44px;
+        height: 44px;
+    }
+
+    .gallery-links a:nth-child(odd) {
+        top: 50px;
+    }
+
+    .gallery-links a:nth-child(1) {
+        left: -275px;
+    }
+
+    .gallery-links a:nth-child(2) {
+        left: -85px;
+    }
+
+    .gallery-links a:nth-child(3) {
+        left: 110px;
+    }
+
+    .gallery-links a:nth-child(4) {
+        left: 305px;
+    }
+
+    .fold-one {
+        top: 700px;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .homepage-bg {
+        background-size: 1600px auto;
+    }
+
+    .gallery-links {
+        top: 320px;
+    }
+
+    .gallery-links a {
+        width: 38px;
+        height: 38px;
+        font-size: 3.5rem;
+    }
+
+    .gallery-links a:nth-child(1) {
+        left: -235px;
+    }
+
+    .gallery-links a:nth-child(2) {
+        left: -75px;
+    }
+
+    .gallery-links a:nth-child(3) {
+        left: 88px;
+    }
+
+    .gallery-links a:nth-child(4) {
+        left: 252px;
+    }
+
+    .fold-one {
+        top: 610px;
+    }
+}
+@media screen and (max-width: 1500px) {
+    .homepage-bg {
+        background-size: 1500px auto;
+    }
+    .gallery-links {
+        top: 300px;
+    }
+    .gallery-links a:nth-child(odd) {
+        top: 40px;
+    }
+    .gallery-links a:nth-child(1) {
+        left: -220px;
+    }
+
+    .gallery-links a:nth-child(2) {
+        left: -75px;
+    }
+
+    .gallery-links a:nth-child(3) {
+        left: 80px;
+    }
+
+    .gallery-links a:nth-child(4) {
+        left: 235px;
+    }
+
+    .fold-one {
+        top: 560px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .homepage-bg {
+        background-size: 1400px auto;
+    }
+    .gallery-links {
+        top: 285px;
+    }
+
+    .gallery-links a {
+        width: 44px;
+        height: 44px;
+    }
+
+    .gallery-links a:nth-child(odd) {
+        top: 40px;
+    }
+
+    .gallery-links a:nth-child(1) {
+        left: -208px;
+    }
+
+    .gallery-links a:nth-child(2) {
+        left: -75px;
+    }
+
+    .gallery-links a:nth-child(3) {
+        left: 72px;
+    }
+
+    .gallery-links a:nth-child(4) {
+        left: 215px;
+    }
+
+    .fold-one {
+        top: 530px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .homepage-bg {
+        background-size: 1400px auto;
+    }
+
+    .gallery-links {
+        top: 285px;
+    }
+    .gallery-links a {
+        width: 28px;
+        height: 28px;
+        font-size: 2.5rem;
+    }
+    .gallery-links a:nth-child(1) {
+        left: -205px;
+    }
+
+    .gallery-links a:nth-child(2) {
+        left: -75px;
+    }
+
+    .gallery-links a:nth-child(3) {
+        left: 75px;
+    }
+
+    .gallery-links a:nth-child(4) {
+        left: 210px;
+    }
+
+    .fold-one {
+        top: 530px;
+        font-size: 64px;
+    }
+}
+@media screen and (max-width: 1024px){
+    .homepage-bg {
+        background-size: 1060px auto;
+    }
+    .gallery-links {
+        top: 230px;
+    }
+
+    .gallery-links a {
+        width: 25px;
+        height: 25px;
+        font-size: 2.25rem;
+    }
+    .gallery-links a:nth-child(odd) {
+        top: 28px;
+    }
+
+    .gallery-links a:nth-child(1) {
+        left: -170px;
+    }
+
+    .gallery-links a:nth-child(2) {
+        left: -65px;
+    }
+
+    .gallery-links a:nth-child(3) {
+        left: 45px;
+    }
+
+    .gallery-links a:nth-child(4) {
+        left: 150px;
+    }
+
+    .fold-one {
+        top: 410px;
+        font-size: 56px;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .homepage-bg {
+        background-size: 920px auto;
+        background-position: center top;
+        height: 120vh;
+        min-height: 480px;
+    }
+
+    .gallery-links {
+        top: 150px;
+    }
+
+    .gallery-links a {
+        width: 20px;
+        height: 20px;
+    }
+    .gallery-links a:nth-child(odd) {
+        top: 22px;
+    }
+
+    .gallery-links a:nth-child(1) {
+        left: -145px;
+    }
+
+    .gallery-links a:nth-child(2) {
+        left: -58px;
+    }
+
+    .gallery-links a:nth-child(3) {
+        left: 38px;
+    }
+
+    .gallery-links a:nth-child(4) {
+        left: 130px;
+    }
+
+    .fold-one {
+        top: 310px;
+    }
+
+    .gallery-bg {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        height: auto;
+    }
+
+    .landscape {
+        font-size: 1.5rem;
+    }
+
+}
+@media screen and (max-width: 780px) {
+    .fold-one { font-size: 48px; }
+}
+
+@media screen and (orientation: portrait) {
+
+    body,
+    html {
+        overflow: hidden;
+    }
+
+    .gallery-links {
+        display: none;
+    }
+
+    .landscape {
+        opacity: 1;
+        background: black;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 99;
+    }
+}
+
+@media screen and (max-width: 1600px) and (max-aspect-ratio: 1368/912) {
+    .homepage-bg {
+        background-image: url('../images/Anupama-Sud_2000x2500.jpg');
+        background-position: center top;
+    }
+    .gallery-links { top: 310px; }
+    .gallery-links a:nth-child(odd) {
+        top: 45px;
+    }
+    .gallery-links a:nth-child(1) {
+        left: -300px;
+    }
+
+    .gallery-links a:nth-child(2) {
+        left: -110px;
+    }
+
+    .gallery-links a:nth-child(3) {
+        left: 83px;
+    }
+
+    .gallery-links a:nth-child(4) {
+        left: 280px;
+    }
+    .fold-one { top: 640px; font-size: 94px; }
+}
+@media screen and (max-width: 1280px) and (max-aspect-ratio: 1368/912) {
+    .homepage-bg {
+        /*background-image: url('../images/Anupama-Sud_2000x2500.jpg');*/
+        background-size: 1280px auto;
+    }
+    .gallery-links { top: 282px; }
+    .gallery-links a:nth-child(1) {
+        left: -275px;
+    }
+
+    .gallery-links a:nth-child(2) {
+        left: -110px;
+    }
+
+    .gallery-links a:nth-child(3) {
+        left: 75px;
+    }
+
+    .gallery-links a:nth-child(4) {
+        left: 250px;
+    }
+    .fold-one { top: 575px; }
+}
+@media screen and (max-width: 1024px) and (max-aspect-ratio: 1368/912) {
+    .homepage-bg {
+        /*background-image: url('../images/Anupama-Sud_2000x2500.jpg');*/
+        background-size: 1080px auto;
+    }
+    .gallery-links { top: 240px; }
+    .gallery-links a:nth-child(odd) {
+        top: 40px;
+    }
+
+    .gallery-links a:nth-child(1) {
+        left: -240px;
+    }
+
+    .gallery-links a:nth-child(2) {
+        left: -95px;
+    }
+
+    .gallery-links a:nth-child(3) {
+        left: 60px;
+    }
+
+    .gallery-links a:nth-child(4) {
+        left: 205px;
+    }
+
+    .fold-one { top: 490px; font-size: 72px; }
+}
+@media screen and (max-width: 1600px) and (min-aspect-ratio: 1440/900) {
+    .homepage-bg { min-height: 105vh; }
+}
